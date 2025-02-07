@@ -1,0 +1,168 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Footer CSS
+----------------------------------------*/
+.footer-widget {
+	&.widget-info {
+		max-width: 375px;
+		width: 100%;
+
+		.footer-logo {
+			max-width: 180px;
+			width: 100%;
+			margin-bottom: 24px;
+			a {
+				display: inline-flex;
+			}
+			& img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+		.desc {
+			color: var(--tj-body);
+			margin-bottom: 15px;
+			p {
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+		.tj-footer-9-social {
+			& .social-icons {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				& li {
+					a {
+						color: var(--tj-white);
+						border: 1px solid rgba(255, 255, 255, 0.14);
+
+						i {
+							color: var(--tj-white);
+						}
+
+						&::before {
+							background: var(--tj-black-2);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.tj-footer {
+	&-9 {
+		&-area {
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 100px 100px 0 0;
+
+			.footer-widget {
+				& .footer-title {
+					& .title {
+						font-weight: var(--tj-fw-sbold);
+						font-size: 20px;
+						letter-spacing: -0.02em;
+						color: var(--tj-white);
+					}
+				}
+			}
+			& .tj-footer-7-top-title {
+				font-size: 20px;
+				letter-spacing: -0.02em;
+				text-transform: uppercase;
+				line-height: 1.5;
+				margin-bottom: 26px;
+			}
+			& .tj-footer-7-top-form {
+				& input {
+					background: var(--tj-white);
+					border: 2px solid var(--tj-bg-2);
+					padding: 16px 20px 16px 25px;
+					color: var(--tj-bg-2);
+					@media #{$md} {
+						padding: 16px 10px 16px 20px;
+						width: 257px;
+					}
+					@media #{$sm} {
+						padding: 16px 10px 16px 20px;
+						width: 320px;
+					}
+					&::placeholder {
+						@media #{$md,$sm} {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			& .tj-footer-7-top-submit-btn {
+				background: var(--tj-bg-2);
+				@media #{$sm} {
+					display: inline-block;
+					margin-top: 0px;
+				}
+			}
+			& .tj-footer-7-wrapper {
+				border-top: 1px solid rgba(255, 255, 255, 0.15);
+			}
+			& .tj-footer-7-wrapper {
+				@media #{$lg} {
+					row-gap: 20px;
+					justify-content: space-between;
+				}
+			}
+			& .tj-footer-6-left {
+				@media #{$lg} {
+					max-width: 224px;
+				}
+				@media #{$md} {
+					display: flex;
+					justify-content: center;
+				}
+				@media #{$sm} {
+					max-width: 215px;
+					margin-left: 0;
+				}
+			}
+			& .footer-menu ul {
+				@media #{$sm,$xs} {
+					margin: 0 0 0;
+				}
+			}
+			& .tj-footer-6-menu {
+				& ul {
+					@media #{$lg} {
+						font-size: 12px;
+					}
+					& li a {
+						@media #{$lg} {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			& .tj-footer-6-copyright {
+				@media #{$lg} {
+					font-size: 12px;
+				}
+			}
+		}
+		&-col {
+			&-2 {
+				@media #{$lg} {
+					max-width: 370px;
+					width: 100%;
+				}
+				@media #{$md} {
+					max-width: 326px;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* !END: Theme Footer CSS */

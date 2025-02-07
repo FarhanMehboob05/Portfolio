@@ -1,0 +1,149 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Hero CSS
+----------------------------------------*/
+
+.tj-header {
+	&-area {
+		&.header-5 {
+			padding: 0 50px 0 50px;
+
+			&.header-duplicate {
+				padding: 10px 50px;
+			}
+			@media #{$xl} {
+				padding: 0 20px 0 20px;
+
+				&.header-duplicate {
+					padding: 10px 20px;
+				}
+			}
+			@media #{$lg,$md,$sm,$xs} {
+				padding: 0;
+				&.header-duplicate {
+					padding: 10px 0;
+				}
+			}
+			& .header-menu {
+				& ul {
+					column-gap: 25px;
+
+					@media #{$xl} {
+						column-gap: 15px;
+					}
+					@media #{$lg} {
+						column-gap: 10px;
+					}
+					& > li {
+						& > a {
+							display: flex;
+							align-items: center;
+							padding: 3px 14px;
+							border: 1px solid transparent;
+							border-radius: 50px;
+							color: rgba(255, 255, 255, 0.5);
+
+							&::before,
+							&::after {
+								display: none;
+							}
+						}
+						&:hover {
+							> a {
+								border-color: var(--tj-theme-primary);
+								color: var(--tj-color-white);
+							}
+						}
+						&.current-menu-ancestor,
+						&.current {
+							> a {
+								border-color: var(--tj-theme-primary);
+								color: var(--tj-color-white);
+							}
+						}
+						& > .sub-menu {
+							& > li {
+								&.has-dropdown {
+									& > a {
+										&::after {
+											display: block;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.header-5 {
+			& .social-icons {
+				& li {
+					& a {
+						border: 1px solid rgba(255, 255, 255, 0.14);
+						&:hover {
+							border-color: rgba(255, 255, 255, 0.14);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-5 {
+		&-right {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 25px;
+
+			@media #{$xs, $sm, $md} {
+				margin-left: auto;
+			}
+			&-social-icons {
+				gap: 10px;
+				& li {
+					& a {
+						width: 30px;
+						height: 30px;
+						border: 1px solid rgba(255, 255, 255, 0.14);
+						border-color: rgba(255, 255, 255, 0.14);
+						font-size: 13px;
+					}
+				}
+			}
+			&-button {
+				& .tj-btn-primary i {
+					transform: rotate(0);
+				}
+			}
+		}
+		&-logo {
+			&-box {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 112px;
+				height: 112px;
+				background: var(--tj-bg);
+				border: 2px solid var(--tj-theme-primary);
+
+				@media #{$xl} {
+					width: 100px;
+					height: 100px;
+				}
+				@media #{$md,$sm,$xs} {
+					width: 90px;
+					height: 90px;
+				}
+
+				img {
+					width: 60%;
+				}
+			}
+		}
+	}
+}
+
+/* !END: Theme Hero CSS */

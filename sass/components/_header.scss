@@ -1,0 +1,37 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+.tj-header {
+	&-area {
+		&.header-1 {
+			.header-button {
+				margin-left: 0;
+			}
+		}
+
+		@media #{$md} {
+			&.header-1 {
+				.header-button {
+					margin-left: auto;
+				}
+			}
+		}
+		@media #{$sm} {
+			&.header-1 {
+				.header-button {
+					margin-left: auto;
+				}
+			}
+		}
+		@media #{$xs} {
+			&.header-1 {
+				.header-button {
+					margin-left: auto;
+				}
+			}
+		}
+	}
+}
+/* !END: Theme Header CSS */

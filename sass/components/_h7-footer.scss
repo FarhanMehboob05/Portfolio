@@ -1,0 +1,208 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Footer CSS
+----------------------------------------*/
+
+.tj-footer {
+	&-7 {
+		&-top {
+			padding: 110px 0 110px;
+			@media #{$md,$sm,$xs} {
+				padding: 60px 0 60px;
+			}
+			&-wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				border-radius: 12px;
+				padding: 0 0;
+				gap: 8px;
+				@media #{$lg,$md,$sm,$xs} {
+					row-gap: 40px;
+				}
+				@media #{$xs} {
+					flex-direction: column;
+				}
+				& .tj-footer-6-left {
+					@media #{$xs} {
+						max-width: inherit;
+					}
+				}
+			}
+			&-title {
+				font-weight: var(--tj-fw-sbold);
+				font-size: 47px;
+				letter-spacing: -0.02em;
+				margin-bottom: 30px;
+				@media #{$xs} {
+					font-size: 30px;
+				}
+			}
+			&-form {
+				.mc4wp-form-fields {
+					display: flex;
+					justify-content: space-between;
+
+					input {
+						width: calc(100% - 65px);
+					}
+				}
+
+				& input {
+					background: transparent;
+					border: 2px solid var(--tj-grey-1);
+					border-radius: 60px;
+					padding: 16px 20px 16px 25px;
+					position: relative;
+					z-index: 2;
+					color: var(--tj-white);
+					&::placeholder {
+						font-size: 16px;
+						color: var(--body);
+					}
+					&:focus {
+						border: 2px solid var(--tj-theme-primary);
+						outline: none;
+					}
+				}
+			}
+			&-submit-btn {
+				width: 60px;
+				height: 60px;
+				line-height: 1;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				background: linear-gradient(
+					90deg,
+					var(--tj-theme-primary) 0%,
+					var(--tj-theme-secondary) 100%
+				);
+				border-radius: 50px;
+				border: none;
+				color: var(--tj-white);
+				.icon_box {
+					position: relative;
+					display: inline-flex;
+					overflow: hidden;
+					padding: 0 4px;
+					transform: rotate(-45deg);
+					i:first-child,
+					i:last-child {
+						transition: all 0.3s ease-in-out 0s;
+					}
+					i:last-child {
+						position: absolute;
+						transform: translateX(-150%);
+					}
+				}
+				&:hover {
+					.icon_box {
+						i:first-child {
+							transform: translateX(150%);
+						}
+						i:last-child {
+							transform: translateX(0%);
+						}
+					}
+				}
+			}
+		}
+		&-col-1 {
+			@media #{$lg} {
+				max-width: 500px;
+				width: 100%;
+			}
+			@media #{$md} {
+				max-width: 430px;
+				width: 100%;
+			}
+		}
+		&-col-2 {
+			@media #{$lg} {
+				max-width: 300px;
+				width: 100%;
+			}
+			@media #{$md} {
+				max-width: 190px;
+				width: 100%;
+			}
+		}
+		&-col-3 {
+			@media #{$lg} {
+				max-width: 450px;
+				width: 100%;
+			}
+		}
+		&-col-4 {
+			@media #{$lg} {
+				max-width: 300px;
+				width: 100%;
+			}
+		}
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			border-top: 1px solid #33283b;
+			padding: 30px 0 30px;
+			@media #{$lg} {
+				row-gap: 20px;
+			}
+			@media #{$md} {
+				row-gap: 20px;
+				column-gap: 20px;
+				justify-content: center;
+			}
+			@media #{$sm,$xs} {
+				justify-content: center;
+				row-gap: 10px;
+				column-gap: 20px;
+			}
+		}
+		&-bottom {
+			& .tj-footer-6-copyright {
+				@media #{$xs} {
+					font-size: 13px;
+				}
+			}
+		}
+		&-middle {
+			& li {
+				div,
+				& a {
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					border: 1px solid rgba(255, 255, 255, 0.14);
+					width: 30px;
+					height: 30px;
+					border-radius: 50%;
+					color: var(--tj-white);
+					font-size: 13px;
+
+					&::before {
+						background: linear-gradient(
+							90deg,
+							var(--tj-theme-primary) 0%,
+							var(--tj-theme-secondary) 100%
+						);
+					}
+
+					i {
+						color: inherit;
+						font-size: inherit;
+					}
+				}
+			}
+			& .tj-header-5-right-media {
+				@media #{$lg} {
+					display: block;
+				}
+			}
+		}
+	}
+}
+/* !END: Theme Footer CSS */

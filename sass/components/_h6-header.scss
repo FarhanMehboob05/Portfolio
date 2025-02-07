@@ -1,0 +1,122 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+.tj-header-area {
+	&.header-6 {
+		padding: 30px 50px;
+
+		.header-menu {
+			margin-left: 0;
+			background-color: var(--tj-black-2);
+			border-radius: 70px;
+			padding: 0px 40px;
+			ul {
+				> li {
+					> a {
+						color: rgba(255, 255, 255, 0.5);
+						padding: 15px 0px;
+						&::after,
+						&::before {
+							display: none;
+						}
+						&.current-menu-ancestor,
+						&.current,
+						&:hover {
+							color: var(--tj-white);
+						}
+					}
+					> .sub-menu {
+						> li {
+							&.current-menu-ancestor,
+							&.current-menu-item {
+								> a {
+									color: var(--tj-white);
+								}
+							}
+							&.has-dropdown {
+								a {
+									&::after {
+										display: block;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.header-button {
+			margin-left: 0;
+
+			.btn {
+				i {
+					transform: rotate(-45deg);
+				}
+
+				&:hover {
+					i {
+						transform: rotate(0);
+					}
+				}
+			}
+		}
+	}
+	@media #{$xl} {
+		&.header-6 {
+			padding: 30px 0;
+		}
+	}
+	@media #{$lg} {
+		&.header-6 {
+			padding: 25px 0;
+		}
+	}
+	@media #{$md} {
+		&.header-6 {
+			padding: 25px 0;
+
+			.header-button {
+				margin-left: auto;
+			}
+		}
+	}
+	@media #{$sm} {
+		&.header-6 {
+			padding: 20px 0;
+			.header-button {
+				margin-left: auto;
+			}
+		}
+	}
+	@media #{$xs} {
+		&.header-6 {
+			padding: 15px 0px;
+			.header-button {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+.tj-header-area {
+	&.header-6-sticky,
+	&.header-6 {
+		.header-menu {
+			ul {
+				> li {
+					> ul.sub-menu {
+						> li:hover {
+							> a {
+								color: var(--tj-white);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* !END: Theme Header CSS */

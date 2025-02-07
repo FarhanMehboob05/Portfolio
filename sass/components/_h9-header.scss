@@ -1,0 +1,75 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+
+.tj-header {
+	&-9 {
+		&-logo {
+			& .logo-box {
+				max-width: 190px;
+				width: 100%;
+			}
+		}
+		&-right {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 30px;
+
+			.btn {
+				color: var(--tj-heading-secondary);
+			}
+			& .social-icons {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				gap: 10px;
+
+				& li {
+					margin: 0;
+					& a {
+						width: 30px;
+						height: 30px;
+						border-color: rgba(255, 255, 255, 0.14);
+						color: var(--tj-white);
+						font-size: 13px;
+						line-height: 1;
+
+						i {
+							color: inherit;
+						}
+
+						&:hover {
+							color: var(--tj-white);
+						}
+					}
+				}
+			}
+
+			@media #{$xl} {
+				gap: 20px;
+			}
+			@media #{$lg,  $sm, $xs} {
+				gap: 20px;
+				margin-left: auto;
+
+				.social-icons {
+					display: none;
+				}
+			}
+			@media #{$md} {
+				gap: 20px;
+				margin-left: auto;
+			}
+			@media #{$xs} {
+				.btn {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+/* !END: Theme Header CSS */

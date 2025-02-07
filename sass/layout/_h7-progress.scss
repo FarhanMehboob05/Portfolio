@@ -1,0 +1,80 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: progress CSS
+----------------------------------------*/
+.progress-single {
+	&.style-7 {
+		background-color: var(--tj-black);
+		border-radius: 10px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		padding: 40px 30px;
+		transition: all 0.3s ease-in-out 0s;
+
+		.progress-text {
+			flex-wrap: wrap;
+			gap: 15px;
+
+			.tj-progress-7-icon {
+				span {
+					width: 80px;
+					height: 80px;
+					line-height: 1;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					background-color: var(--tj-theme-accent-2);
+					border-radius: 50%;
+					font-size: 45px;
+					line-height: 1;
+					color: var(--tj-white);
+
+					& img,
+					svg {
+						max-width: 48px;
+						width: 100%;
+						height: auto;
+						transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+					}
+					& i {
+						display: inline-flex;
+						line-height: 1;
+						transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+					}
+				}
+			}
+			.progress-title {
+				width: calc(100% - 95px);
+				& .title {
+					font-size: 20px;
+					letter-spacing: -0.02em;
+				}
+			}
+		}
+		.desc {
+			color: rgba(255, 255, 255, 0.6);
+			margin-bottom: 75px;
+		}
+
+		&:hover {
+			border-color: var(--tj-theme-primary);
+			& .tj-progress-7-icon {
+				& span {
+					img,
+					svg {
+						transform: scaleX(-1);
+					}
+					& i {
+						transform: scaleX(-1);
+					}
+				}
+			}
+		}
+
+		@media #{$xl, $xs} {
+			padding: 40px 20px;
+		}
+	}
+}
+
+/* !END: progress CSS */

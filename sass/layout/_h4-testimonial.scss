@@ -1,0 +1,128 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme testimonial CSS
+----------------------------------------*/
+.style-4 {
+	.testimonial-pagination {
+		text-align: center;
+		margin-top: 25px;
+		.swiper-pagination-bullet {
+			background: var(--tj-grey-2);
+			opacity: 1;
+			&.swiper-pagination-bullet-active {
+				background: var(--tj-theme-primary);
+			}
+		}
+	}
+}
+
+.testimonial-item {
+	&.style-4 {
+		background-color: var(--tj-theme-accent-2);
+		border-radius: 15px;
+		padding: 45px 30px;
+
+		.top-infos {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 25px;
+			margin-bottom: 20px;
+			.title {
+				font-weight: var(--tj-fw-medium);
+				letter-spacing: 0.02em;
+				margin-bottom: 0;
+			}
+		}
+		.desc {
+			color: var(--tj-white);
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.testimonial-auother {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-top: 50px;
+			.auother-image {
+				max-width: 50px;
+				width: 100%;
+				img {
+					width: 100%;
+					height: 50px;
+					object-fit: cover;
+					border-radius: 50%;
+				}
+			}
+			.auother-text {
+				.title {
+					font-size: 16px;
+					letter-spacing: 0.02em;
+					margin-bottom: 5px;
+				}
+				.subtitle {
+					font-size: 14px;
+					letter-spacing: 0.02em;
+				}
+			}
+		}
+		@media #{$lg} {
+			padding: 35px 15px;
+			.top-infos {
+				gap: 10px;
+			}
+		}
+		@media #{$md} {
+			padding: 35px 15px;
+		}
+		@media #{$sm} {
+			padding: 35px 15px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@media #{$xs} {
+			padding: 35px 15px;
+			margin-left: auto;
+			margin-right: auto;
+			.top-infos {
+				gap: 12px;
+			}
+		}
+	}
+}
+
+.star-ratings {
+	unicode-bidi: bidi-override;
+	font-size: 16px;
+	letter-spacing: 5px;
+	line-height: 1;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	-webkit-text-stroke: 1px var(--tj-theme-primary);
+	-webkit-text-fill-color: transparent;
+
+	.fill-ratings {
+		-webkit-text-fill-color: var(--tj-theme-primary);
+		padding: 0;
+		position: absolute;
+		z-index: 1;
+		display: block;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		span {
+			display: inline-block;
+		}
+	}
+	.empty-ratings {
+		padding: 0;
+		display: block;
+		z-index: 0;
+	}
+}
+/* !END: Theme testimonial CSS */
